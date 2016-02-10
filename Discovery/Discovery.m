@@ -51,19 +51,19 @@
         // start the central and peripheral managers
         _queue = dispatch_queue_create("com.omerfarukgul.discovery", DISPATCH_QUEUE_SERIAL);
         
-        _shouldAdvertise = NO;
-        _shouldDiscover = NO;
+        self.shouldAdvertise = NO;
+        self.shouldDiscover = NO;
         
         switch (startOption) {
             case DIStartAdvertisingAndDetecting:
-                _shouldAdvertise = YES;
-                _shouldDiscover = YES;
+                self.shouldAdvertise = YES;
+                self.shouldDiscover = YES;
                 break;
             case DIStartAdvertisingOnly:
-                _shouldAdvertise = YES;
+                self.shouldAdvertise = YES;
                 break;
             case DIStartDetectingOnly:
-                _shouldDiscover = YES;
+                self.shouldDiscover = YES;
                 break;
             case DIStartNone:
             default:
